@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumar Azad - Overleaf Projects Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #667eea;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .bio {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.8;
+        }
+
+        .links {
+            margin-top: 30px;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: white;
+            margin: 60px 0 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .project-card .category {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #667eea;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .project-card .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .project-card .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            margin-top: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .emoji {
+            font-size: 2em;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .section-title {
+                font-size: 1.8em;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kumar Azad</h1>
+            <p class="subtitle">Physics · Mathematics · AI · Quantum Computing</p>
+            <p class="bio">
+                Welcome to my Overleaf projects showcase! I'm a STEM enthusiast passionate about
+                exploring the fundamental laws of nature through mathematical physics, quantum mechanics,
+                and computational approaches. Here you'll find my LaTeX projects spanning research papers,
+                educational materials, and explorations in theoretical physics.
+            </p>
+            <div class="links">
+                <a href="https://github.com/KrAzad0" target="_blank">👨‍💻 GitHub</a>
+                <a href="https://orcid.org/0009-0002-2965-5839" target="_blank">🔬 ORCID</a>
+                <a href="mailto:kumarazad9211p@gmail.com">✉️ Email</a>
+            </div>
+        </header>
+
+        <h2 class="section-title">📚 Overleaf Projects</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>⚛️ Quantum Mechanics Gallery</h3>
+                <span class="category">Quantum Physics</span>
+                <p>
+                    A curated gallery of quantum mechanics concepts, equations, architectures, and visualizations.
+                    Inspired by modern quantum computing research and foundational quantum theory, this project
+                    explores wave functions, operators, and quantum states through elegant LaTeX formatting.
+                </p>
+                <a href="https://github.com/KrAzad0/quantum-mechanics-gallery" class="btn" target="_blank">View Repository</a>
+                <a href="#" class="btn" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">Overleaf Link</a>
+            </div>
+
+            <div class="project-card">
+                <h3>🌌 Hydrogen Atom From Scratch</h3>
+                <span class="category">Atomic Physics</span>
+                <p>
+                    A comprehensive mathematical treatment of the hydrogen atom, deriving solutions to the
+                    Schrödinger equation from first principles. Covers radial wave functions, spherical harmonics,
+                    and energy eigenvalues with detailed step-by-step derivations.
+                </p>
+                <a href="https://github.com/KrAzad0/Hydrogen-Atom-From-Scratch" class="btn" target="_blank">View Repository</a>
+                <a href="#" class="btn" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">Overleaf Link</a>
+            </div>
+
+            <div class="project-card">
+                <h3>📊 Scientific Calculator Documentation</h3>
+                <span class="category">Mathematics</span>
+                <p>
+                    Technical documentation for advanced scientific calculations, covering numerical methods,
+                    special functions, and computational algorithms. Includes implementation notes and
+                    mathematical foundations for scientific computing.
+                </p>
+                <a href="https://github.com/KrAzad0/Scientific-Calculator" class="btn" target="_blank">View Repository</a>
+                <a href="#" class="btn" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">Overleaf Link</a>
+            </div>
+
+            <div class="project-card">
+                <h3>📖 Daily Paper Library</h3>
+                <span class="category">Research</span>
+                <p>
+                    A living collection of research papers, findings, and notes organized by topic and date.
+                    Documents my journey through contemporary physics research, with summaries and critical
+                    analysis of key papers in quantum mechanics, condensed matter, and computational physics.
+                </p>
+                <a href="https://github.com/KrAzad0/daily-paper-library" class="btn" target="_blank">View Repository</a>
+                <a href="#" class="btn" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">Overleaf Link</a>
+            </div>
+
+            <div class="project-card">
+                <h3>🗺️ Project Atlas</h3>
+                <span class="category">Portfolio</span>
+                <p>
+                    A comprehensive portfolio showcasing AI, Physics, Quantum Computing, and Code projects.
+                    Includes work on ChatGPT applications, Claude AI, Codex, and ClaudeCowork builds,
+                    demonstrating the intersection of theoretical physics and modern AI technologies.
+                </p>
+                <a href="https://github.com/KrAzad0/azad-project-atlas" class="btn" target="_blank">View Repository</a>
+                <a href="https://krazad0.github.io/azad-project-atlas/" class="btn" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">Live Site</a>
+            </div>
+
+            <div class="project-card">
+                <h3>📝 Research Papers & Notes</h3>
+                <span class="category">Academic</span>
+                <p>
+                    Collection of academic papers, lecture notes, and study materials in LaTeX format.
+                    Topics include mathematical physics, quantum field theory, statistical mechanics,
+                    and computational methods. Perfect for students and researchers.
+                </p>
+                <a href="#" class="btn">Coming Soon</a>
+                <a href="#" class="btn" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">Overleaf Link</a>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Kumar Azad (KrAzad0)</strong></p>
+            <p>Physics · Mathematics · AI · Quantum Computing</p>
+            <p style="margin-top: 20px; color: #999;">Built with ❤️ for the love of science and mathematics</p>
+            <p style="margin-top: 10px;">
+                <a href="https://krazad0.github.io" style="color: #667eea; text-decoration: none; font-weight: 600;">krazad0.github.io</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
